@@ -7,10 +7,6 @@ const openai = new OpenAI({
 
 })
 
-export async function GET(req:NextRequest) {
-    return {"mess":"Hi"}
-}
-
 export const maxDuration = 300;
 
 export async function POST(req: NextRequest) {

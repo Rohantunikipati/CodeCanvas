@@ -34,6 +34,15 @@ const items = [
 
 ]
 
+const containerVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
 export function AppSidebar() {
     const path = usePathname();
     console.log(path)
@@ -42,9 +51,10 @@ export function AppSidebar() {
             <SidebarHeader>
                 <div className='p-4'>
                     <div className='flex items-center gap-2'>
-                        <Image src={'/logo.svg'} alt='logo' width={100} height={100}
+                        <Image src={'/smile.svg'} alt='logo' width={100} height={100}
                             className='w-[40px] h-[40px]' />
-                        <h2 className='font-bold text-lg'>Wireframe to Code</h2>
+                        <h2 className='font-bold text-lg'>CodeCanvas
+</h2>
                     </div>
                     <h2 className='text-sm text-gray-400 text-center'>Build Awesome</h2>
                 </div>
@@ -53,7 +63,7 @@ export function AppSidebar() {
                 <SidebarGroup>
 
                     <SidebarGroupContent>
-                        <SidebarMenu className='mt-5'>
+                        <SidebarMenu className='mt-5' >
                             {items.map((item, index) => (
                                 <a href={item.url} key={index}
                                     className={`p-2 text-lg flex gap-2 items-center
@@ -69,9 +79,6 @@ export function AppSidebar() {
                     </SidebarGroupContent>
                 </SidebarGroup>
             </SidebarContent>
-            <SidebarFooter>
-                <h2 className='p-2 text-gray-400 text-sm'>Copyright @Tubeguruji</h2>
-            </SidebarFooter>
         </Sidebar>
     )
 }

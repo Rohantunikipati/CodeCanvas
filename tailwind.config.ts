@@ -65,6 +65,15 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			animation: {
+				gradient: "gradientMove 3s ease infinite",
+			},
+			keyframes: {
+				gradientMove: {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				},
 			}
 		}
 	},

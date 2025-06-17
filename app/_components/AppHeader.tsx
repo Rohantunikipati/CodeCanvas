@@ -8,9 +8,9 @@ function AppHeader({ hideSidebar = false }) {
         <div className='p-4 shadow-sm flex items-center justify-between w-full '>
             {!hideSidebar ? <SidebarTrigger /> :
                 <div className='flex items-center gap-2'>
-                    <Image src={'/logo.svg'} alt='logo' width={100} height={100}
+                    <Image src={'/smile.svg'} alt='logo' width={100} height={100}
                         className='w-[40px] h-[40px]' />
-                    <h2 className='font-bold text-lg'>Wireframe to Code</h2>
+                    <h2 className='font-bold text-lg'>CodeCanvas</h2>
                 </div>
             }
             <ProfileAvatar />
